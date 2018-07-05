@@ -21,6 +21,10 @@ const schema = new Schema({
     },
     tags: [{
         type: String
+    }],
+    postagem: [{
+        type: mongoose.Schema.ObjectId,
+        ref: 'Post_autor'
     }]
 });
 

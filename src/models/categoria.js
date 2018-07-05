@@ -14,14 +14,13 @@ const schema = new Schema({
         index: true,
         unique: true
     },
-    descricao: {
-        type: String,
-        required: true,
-        trim:true
-    },
-    tags: [{
+    subcategorias: [{
         type: String
+    }],
+    postagem: [{
+        type: mongoose.Schema.ObjectId,
+        ref: 'cat_postagem'
     }]
 });
 
-module.exports = mongoose.model('Autor', schema);
+module.exports = mongoose.model('Categoria', schema);

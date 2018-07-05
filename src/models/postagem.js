@@ -19,17 +19,24 @@ const schema = new Schema({
         required: true,
         trim:true
     },
-    data: {
+    data_p: {
         type: Date,
         required: true,
         trim:true
     },
-    categorias: [{
-        type: String
-    }],
     visualizacoes: {
-        type: Integer
-    }
+        type: Number
+    },
+    autor:{
+        type: mongoose.Schema.ObjectId,
+        ref: 'Autor',
+        required:true
+    },
+    categoria: [{
+        type: mongoose.Schema.ObjectId,
+        ref: 'cat_postagem'
+    }]
+
 });
 
 module.exports = mongoose.model('Postagem', schema);
