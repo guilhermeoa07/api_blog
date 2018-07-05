@@ -19,6 +19,7 @@ const autor_routers = require('./routers/autor_routers');
 const categoria_routers = require('./routers/categoria_routers');
 const postagem_routers = require('./routers/postagem_routers');
 
+//define acesso as rotas
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/autor', autor_routers);

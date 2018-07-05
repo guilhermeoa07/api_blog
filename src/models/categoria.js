@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+//Modelo de interação com o MongoDB
 const schema = new Schema({
     nome: {
         type: String,
